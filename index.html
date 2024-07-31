@@ -6,28 +6,37 @@
     <title>Direcciones Falsas</title>
     <link rel="stylesheet" href="styles.css">
     <script>
-        // Función para copiar texto al portapapeles
-        function copyToClipboard(text) {
-            // Crear un elemento de input temporal para usarlo en la copia
-            const input = document.createElement('input');
-            input.value = text;
-            document.body.appendChild(input);
-            input.select();
-            document.execCommand('copy');
-            document.body.removeChild(input);
-            
-            // Notificar al usuario
-            alert('Texto copiado al portapapeles: ' + text);
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
             // Agregar un evento click a cada celda de la tabla
             document.querySelectorAll('#direcciones-table td').forEach(cell => {
                 cell.addEventListener('click', (event) => {
                     const text = event.target.innerText;
-                    copyToClipboard(text);
+                    // Intentar usar la API moderna del portapapeles
+                    navigator.clipboard.writeText(text).then(() => {
+                        // Notificar al usuario
+                        alert('Texto copiado al portapapeles: ' + text);
+                    }).catch(err => {
+                        console.error('Error al copiar al portapapeles: ', err);
+                        // Si hay un error, usar el método alternativo
+                        fallbackCopyTextToClipboard(text);
+                    });
                 });
             });
+
+            function fallbackCopyTextToClipboard(text) {
+                // Crear un elemento de input temporal para usarlo en la copia
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                try {
+                    document.execCommand('copy');
+                    alert('Texto copiado al portapapeles: ' + text);
+                } catch (err) {
+                    console.error('Error al copiar al portapapeles usando el método alternativo: ', err);
+                }
+                document.body.removeChild(textarea);
+            }
         });
     </script>
 </head>
@@ -36,7 +45,7 @@
     <table id="direcciones-table">
         <thead>
             <tr>
-                <th>Pais</th>
+                <th>Paises</th>
                 <th>Distrito/Estado/Condado</th>
                 <th>Ciudad</th>
                 <th>Calle</th>
