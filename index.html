@@ -19,7 +19,7 @@
             const clipboard = new ClipboardJS('.copyable');
 
             clipboard.on('success', function(e) {
-                alert('Texto copiado al portapapeles: ' + e.text);
+                
                 e.clearSelection();
             });
 
