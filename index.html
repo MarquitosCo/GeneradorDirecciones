@@ -5,6 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direcciones Falsas</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Texto copiado al portapapeles: ' + text);
+            }).catch(err => {
+                console.error('Error al copiar al portapapeles: ', err);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('#direcciones-table td').forEach(cell => {
+                cell.addEventListener('click', (event) => {
+                    const text = event.target.innerText;
+                    copyToClipboard(text);
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <h1>Direcciones Falsas</h1>
