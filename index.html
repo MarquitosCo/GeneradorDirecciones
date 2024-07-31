@@ -19,16 +19,17 @@
             const clipboard = new ClipboardJS('.copyable');
 
             clipboard.on('success', function(e) {
-                // No hacer nada en el evento de éxito
+                alert('Texto copiado al portapapeles: ' + e.text);
                 e.clearSelection();
             });
 
             clipboard.on('error', function(e) {
-                console.error('Error al copiar al portapapeles.');
+                alert('Error al copiar al portapapeles.');
             });
         });
     </script>
 </head>
+
 <body>
     <h1>Direcciones Falsas</h1>
     <table id="direcciones-table">
@@ -50,4 +51,23 @@
             .then(response => response.text())
             .then(data => {
                 const lines = data.split('\n');
-                const tableBody = document.querySelector('#direcci
+                const tableBody = document.querySelector('#direcciones-table tbody');
+                lines.slice(1).forEach(line => {
+                    if (line.trim()) {
+                        const [pais, estado, ciudad, calle, codigoPostal] = line.split(',');
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
+                            <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
+                            <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
+                            <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
+                            <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    }
+                });
+            });
+    </script>
+</body>
+
+</html>
