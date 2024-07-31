@@ -3,21 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='cache-control' content='no-cache'> 
-<meta http-equiv='expires' content='0'> 
-<meta http-equiv='pragma' content='no-cache'>
     <title>Direcciones Falsas</title>
     <link rel="stylesheet" href="styles.css">
     <script>
+        // Función para copiar texto al portapapeles
         function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Texto copiado al portapapeles: ' + text);
-            }).catch(err => {
-                console.error('Error al copiar al portapapeles: ', err);
-            });
+            // Crear un elemento de input temporal para usarlo en la copia
+            const input = document.createElement('input');
+            input.value = text;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand('copy');
+            document.body.removeChild(input);
+            
+            // Notificar al usuario
+            alert('Texto copiado al portapapeles: ' + text);
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Agregar un evento click a cada celda de la tabla
             document.querySelectorAll('#direcciones-table td').forEach(cell => {
                 cell.addEventListener('click', (event) => {
                     const text = event.target.innerText;
@@ -32,7 +36,7 @@
     <table id="direcciones-table">
         <thead>
             <tr>
-                <th>Paises</th>
+                <th>Pais</th>
                 <th>Distrito/Estado/Condado</th>
                 <th>Ciudad</th>
                 <th>Calle</th>
