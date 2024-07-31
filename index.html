@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direcciones Falsas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Direcciones Falsas</h1>
+    <table id="direcciones-table">
+        <thead>
+            <tr>
+                <th>Pais</th>
+                <th>Distrito/Estado/Condado</th>
+                <th>Ciudad</th>
+                <th>Calle</th>
+                <th>Codigo Postal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las filas de la tabla se llenarán dinámicamente con JavaScript -->
+        </tbody>
+    </table>
+    <script>
+        fetch('direcciones_falsas.csv')
+            .then(response => response.text())
+            .then(data => {
+                const lines = data.split('\n');
+                const tableBody = document.querySelector('#direcciones-table tbody');
+                lines.slice(1).forEach(line => {
+                    if (line.trim()) {
+                        const [pais, estado, ciudad, calle, codigoPostal] = line.split(',');
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${pais}</td>
+                            <td>${estado}</td>
+                            <td>${ciudad}</td>
+                            <td>${calle}</td>
+                            <td>${codigoPostal}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    }
+                });
+            });
+    </script>
+</body>
+</html>
