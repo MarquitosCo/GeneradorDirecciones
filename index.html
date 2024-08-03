@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direcciones Falsas</title>
@@ -20,9 +20,21 @@
             color: #f3f3a3; /* Amarillo claro al pasar el cursor */
             text-decoration: underline;
         }
+
+        /* Negritas en las columnas ID y País */
+        td:first-child, /* Columna ID */
+        td:nth-child(2)  /* Columna País */ {
+            font-weight: bold;
+        }
+
+        /* Menos visibilidad para la columna Estado */
+        td:nth-child(3) { /* Columna Estado */
+            opacity: 0.6;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            // Inicializa clipboard.js
             const clipboard = new ClipboardJS('.copyable');
 
             clipboard.on('success', function(e) {
@@ -43,7 +55,7 @@
             <tr>
                 <th>ID</th>
                 <th>Pais</th>
-                <th>Estado</th>
+                <th>Distrito/Estado/Condado</th>
                 <th>Ciudad</th>
                 <th>Calle</th>
                 <th>Codigo Postal</th>
@@ -77,4 +89,5 @@
             });
     </script>
 </body>
+
 </html>
