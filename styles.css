@@ -1,52 +1,46 @@
 body {
-    font-family: 'Consolas', 'Courier New', monospace;
+    font-family: 'Fira Code', Consolas, 'Courier New', monospace;
     margin: 0;
     padding: 0;
-    background-color: #1e1e1e; /* Fondo general similar al tema oscuro de VS Code */
-    color: #d4d4d4; /* Texto general en gris claro */
+    background-color: #1e1e1e;
+    color: #d4d4d4;
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
-    color: #569cd6; /* Azul claro similar a los títulos en VS Code */
+    color: #d4d4d4;
 }
 
 table {
-    width: 90%;
+    width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #252526; /* Fondo de la tabla en gris oscuro */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-color: #252526;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 th, td {
-    padding: 12px;
-    border: 1px solid #3c3c3c; /* Borde gris oscuro */
+    padding: 10px;
+    border: 1px solid #3e3e42;
     text-align: left;
-    color: #d4d4d4; /* Texto en gris claro similar al texto de VS Code */
+    color: #d4d4d4;
 }
 
 th {
-    background-color: #333333; /* Fondo de las cabeceras en gris más oscuro */
-    color: #dcdcdc; /* Texto blanco/gris claro para las cabeceras */
+    background-color: #333333;
 }
 
 tr:nth-child(even) {
-    background-color: #2d2d2d; /* Gris oscuro para filas pares */
-}
-
-tr:hover {
-    background-color: #37373d; /* Color de fondo para el hover */
-    color: #ffffff; /* Texto en blanco para el hover */
+    background-color: #2d2d2d;
 }
 
 .copyable {
     cursor: pointer;
-    color: #569cd6; /* Azul claro para texto copiable */
+    color: #569cd6; /* Cambia este color para un mejor contraste */
+    text-decoration: none;
 }
 
 .copyable:hover {
-    color: #9cdcfe; /* Azul más claro para hover en texto copiable */
     text-decoration: underline;
 }
