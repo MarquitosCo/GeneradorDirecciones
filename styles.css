@@ -6,6 +6,20 @@ body {
     color: #d4d4d4; /* Texto general en blanco/gris claro */
 }
 
+
+.tono1 {
+    background-color: #333333; /* Tonalidad 1 */
+}
+
+.tono2 {
+    background-color: #3a3a3a; /* Tonalidad 2 */
+}
+
+.tono3 {
+    background-color: #424242; /* Tonalidad 3 */
+}
+
+
 h1 {
     text-align: center;
     margin-top: 20px;
