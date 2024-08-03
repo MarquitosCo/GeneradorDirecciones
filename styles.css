@@ -1,52 +1,52 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Consolas', 'Courier New', monospace;
     margin: 0;
     padding: 0;
-    background-color: #2e3440; /* Fondo general */
-    color: #ffffff; /* Texto general en blanco */
+    background-color: #1e1e1e; /* Fondo general similar al tema oscuro de VS Code */
+    color: #d4d4d4; /* Texto general en gris claro */
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
-    color: #88c0d0; /* Azul claro para el título */
+    color: #569cd6; /* Azul claro similar a los títulos en VS Code */
 }
 
 table {
     width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #3b3b3b; /* Gris oscuro para la tabla */
+    background-color: #252526; /* Fondo de la tabla en gris oscuro */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 th, td {
     padding: 12px;
-    border: 1px solid #4c566a; /* Borde gris ligeramente más claro */
+    border: 1px solid #3c3c3c; /* Borde gris oscuro */
     text-align: left;
-    color: #ffffff; /* Texto en blanco */
+    color: #d4d4d4; /* Texto en gris claro similar al texto de VS Code */
 }
 
 th {
-    background-color: #4c4c4c; /* Gris oscuro para las cabeceras */
-    color: #ffffff; /* Texto blanco para las cabeceras */
+    background-color: #333333; /* Fondo de las cabeceras en gris más oscuro */
+    color: #dcdcdc; /* Texto blanco/gris claro para las cabeceras */
 }
 
 tr:nth-child(even) {
-    background-color: #565656; /* Gris ligeramente más claro para filas pares */
+    background-color: #2d2d2d; /* Gris oscuro para filas pares */
 }
 
 tr:hover {
-    background-color: #5e81ac; /* Azul para hover */
-    color: #eceff4; /* Texto claro para hover */
+    background-color: #37373d; /* Color de fondo para el hover */
+    color: #ffffff; /* Texto en blanco para el hover */
 }
 
 .copyable {
     cursor: pointer;
-    color: #81a1c1; /* Azul para texto copiable */
+    color: #569cd6; /* Azul claro para texto copiable */
 }
 
 .copyable:hover {
-    color: #88c0d0; /* Azul más claro para hover en texto copiable */
+    color: #9cdcfe; /* Azul más claro para hover en texto copiable */
     text-decoration: underline;
 }
