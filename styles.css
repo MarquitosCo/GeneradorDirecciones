@@ -43,10 +43,10 @@ tr:hover {
 
 .copyable {
     cursor: pointer;
-    color: #dcdcaa; /* Amarillo para el texto copiable/hipervínculos */
+    color: #d4d4d4; /* Blanco para los links por defecto */
 }
 
 .copyable:hover {
-    color: #f3f3a3; /* Amarillo más claro para hover en texto copiable */
+    color: #f3f3a3; /* Amarillo claro al pasar el cursor */
     text-decoration: underline;
 }
