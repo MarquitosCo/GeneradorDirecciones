@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,6 @@
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Inicializa clipboard.js
             const clipboard = new ClipboardJS('.copyable');
 
             clipboard.on('success', function(e) {
@@ -66,17 +65,4 @@
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <td class="copyable" data-clipboard-text="${id}">${id}</td>
-                            <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
-                            <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
-                            <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
-                            <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
-                            <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
-                        `;
-                        tableBody.appendChild(row);
-                    }
-                });
-            });
-    </script>
-</body>
-
-</html>
+                            <td class="copyable" data-clipboard-text="${pais}">${pais}</
