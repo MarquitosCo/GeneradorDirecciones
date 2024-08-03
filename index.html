@@ -65,4 +65,16 @@
                         const row = document.createElement('tr');
                         row.innerHTML = `
                             <td class="copyable" data-clipboard-text="${id}">${id}</td>
-                            <td class="copyable" data-clipboard-text="${pais}">${pais}</
+                            <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
+                            <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
+                            <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
+                            <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
+                            <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    }
+                });
+            });
+    </script>
+</body>
+</html>
