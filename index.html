@@ -77,13 +77,10 @@
                 const row = document.createElement('tr');
                 
                 // Asignar clases según el ID
-                if (id.match(/[A-Z][0][1-6]/)) {
-                    row.classList.add('tono1');
-                } else if (id.match(/[A-Z][0][7-12]/)) {
-                    row.classList.add('tono2');
-                } else if (id.match(/[A-Z][1][3]/)) {
-                    row.classList.add('tono3');
-                }
+                // Asignar clases según el ID
+if (id) {
+    row.classList.add('tono1'); // Asigna una clase temporal para ver si las filas se muestran
+}
 
                 row.innerHTML = `
                     <td class="copyable" data-clipboard-text="${id}">${id}</td>
