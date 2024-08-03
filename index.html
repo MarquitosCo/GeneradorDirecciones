@@ -49,26 +49,35 @@
     </table>
     <script>
         fetch('direcciones_generadas.csv')
-            .then(response => response.text())
-            .then(data => {
-                const lines = data.split('\n');
-                const tableBody = document.querySelector('#direcciones-table tbody');
-                lines.slice(1).forEach(line => {
-                    if (line.trim()) {
-                        const [pais, estado, ciudad, calle, codigoPostal] = line.split(',');
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                        
-                            <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
-                            <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
-                            <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
-                            <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
-                            <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
-                        `;
-                        tableBody.appendChild(row);
-                    }
-                });
-            });
+    .then(response => response.text())
+    .then(data => {
+        const lines = data.split('\n');
+        const tableBody = document.querySelector('#direcciones-table tbody');
+        lines.slice(1).forEach(line => {
+            if (line.trim()) {
+                const columns = line.split(',');
+                
+                const id = columns[0].trim();
+                const pais = columns[1].trim();
+                const estado = columns[2].trim();
+                const ciudad = columns[3].trim();
+                const calle = columns[4].trim();
+                const codigoPostal = columns[5].trim();
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="copyable" data-clipboard-text="${id}">${id}</td>
+                    <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
+                    <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
+                    <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
+                    <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
+                    <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
+                `;
+                tableBody.appendChild(row);
+            }
+        });
+    });
+
     </script>
 </body>
 
