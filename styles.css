@@ -2,50 +2,51 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #2e3440;
-    color: #ffffff;
+    background-color: #2e3440; /* Fondo general */
+    color: #ffffff; /* Texto general en blanco */
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
-    color: #88c0d0;
+    color: #88c0d0; /* Azul claro para el título */
 }
 
 table {
     width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #3b4252;
+    background-color: #3b3b3b; /* Gris oscuro para la tabla */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 th, td {
     padding: 12px;
-    border: 1px solid #4c566a;
+    border: 1px solid #4c566a; /* Borde gris ligeramente más claro */
     text-align: left;
+    color: #ffffff; /* Texto en blanco */
 }
 
 th {
-    background-color: #434c5e;
-    color: #88c0d0;
+    background-color: #4c4c4c; /* Gris oscuro para las cabeceras */
+    color: #ffffff; /* Texto blanco para las cabeceras */
 }
 
 tr:nth-child(even) {
-    background-color: #4c566a;
+    background-color: #565656; /* Gris ligeramente más claro para filas pares */
 }
 
 tr:hover {
-    background-color: #5e81ac;
-    color: #eceff4;
+    background-color: #5e81ac; /* Azul para hover */
+    color: #eceff4; /* Texto claro para hover */
 }
 
 .copyable {
     cursor: pointer;
-    color: #81a1c1;
+    color: #81a1c1; /* Azul para texto copiable */
 }
 
 .copyable:hover {
-    color: #88c0d0;
+    color: #88c0d0; /* Azul más claro para hover en texto copiable */
     text-decoration: underline;
 }
