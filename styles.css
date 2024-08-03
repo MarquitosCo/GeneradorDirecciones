@@ -2,41 +2,50 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #1e1e1e;
-    color: #c7c7c7;
+    background-color: #2e3440;
+    color: #d8dee9;
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
-    color: #61dafb;
+    color: #88c0d0;
 }
 
 table {
-    width: 80%;
+    width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #252526;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #3b4252;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 th, td {
-    padding: 10px;
-    border: 1px solid #3c3c3c;
+    padding: 12px;
+    border: 1px solid #4c566a;
     text-align: left;
 }
 
 th {
-    background-color: #333333;
-    color: #d4d4d4;
+    background-color: #434c5e;
+    color: #88c0d0;
 }
 
 tr:nth-child(even) {
-    background-color: #2a2a2a;
+    background-color: #4c566a;
+}
+
+tr:hover {
+    background-color: #5e81ac;
+    color: #eceff4;
 }
 
 .copyable {
-    color: #61dafb;
     cursor: pointer;
+    color: #81a1c1;
+}
+
+.copyable:hover {
+    color: #88c0d0;
     text-decoration: underline;
 }
