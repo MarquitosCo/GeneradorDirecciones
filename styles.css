@@ -7,17 +7,7 @@ body {
     color: #d4d4d4; /* Texto general en blanco/gris claro */
 }
 
-.tono1 {
-    background-color: #2d2d2d; /* Tono más oscuro */
-}
 
-.tono2 {
-    background-color: #3e3e3e; /* Tono intermedio */
-}
-
-.tono3 {
-    background-color: #4f4f4f; /* Tono más claro */
-}
 
 h1 {
     text-align: center;
