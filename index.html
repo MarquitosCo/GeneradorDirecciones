@@ -78,9 +78,19 @@
                 
                 // Asignar clases según el ID
                 // Asignar clases según el ID
-if (id) {
-    row.classList.add('tono1'); // Asigna una clase temporal para ver si las filas se muestran
+if (/^[A-Z]\d{2}$/.test(id)) {
+    const num = parseInt(id.slice(1), 10);
+    if (num >= 1 && num <= 6) {
+        row.classList.add('tono1');
+    } else if (num >= 7 && num <= 12) {
+        row.classList.add('tono2');
+    } else if (num === 13) {
+        row.classList.add('tono3');
+    }
+} else {
+    console.log(`El ID ${id} no coincide con el formato esperado.`);
 }
+
 
                 row.innerHTML = `
                     <td class="copyable" data-clipboard-text="${id}">${id}</td>
@@ -94,6 +104,8 @@ if (id) {
             }
         });
     });
+        console.log(`Asignando clase a ID: ${id}`);
+
     </script>
 </body>
 
