@@ -20,9 +20,13 @@
             text-decoration: underline;
         }
 
-        /* Negritas en las columnas ID y País */
-        td:first-child, /* Columna ID */
-        td:nth-child(2)  /* Columna País */ {
+        /* Negritas en las columnas ID y País, y agrandar el tamaño de letra en la columna ID */
+        td:first-child { /* Columna ID */
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        td:nth-child(2) { /* Columna País */
             font-weight: bold;
         }
 
@@ -31,7 +35,12 @@
             opacity: 0.6;
         }
 
-        /* Tonalidades de fondo para las filas */
+        /* Color al hacer click en una celda */
+        td.copied {
+            background-color: #3e3e3e; /* Color de fondo cuando se copia */
+            transition: background-color 0.3s ease;
+        }
+
         .tono1 {
             background-color: #2d2d2d; /* Tono más oscuro */
         }
@@ -43,11 +52,6 @@
         .tono3 {
             background-color: #4f4f4f; /* Tono más claro */
         }
-
-        /* Estilo para celdas al hacer clic */
-        .clicked {
-            background-color: #f39c12 !important; /* Color naranja */
-        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -57,14 +61,11 @@
             clipboard.on('success', function(e) {
                 e.clearSelection();
 
-                // Cambia el color de la celda al hacer clic
-                const cell = e.trigger;
-                cell.classList.add('clicked');
-                
-                // Vuelve al color original después de 1 segundo
+                // Cambiar el color de la celda copiada
+                e.trigger.classList.add('copied');
                 setTimeout(() => {
-                    cell.classList.remove('clicked');
-                }, 3000); 
+                    e.trigger.classList.remove('copied');
+                }, 1000);
             });
 
             clipboard.on('error', function(e) {
@@ -83,7 +84,6 @@
 
                             // Asignar clases según el ID
                             const num = parseInt(id.slice(1), 10);
-
                             if (num >= 1 && num <= 6) {
                                 row.classList.add('tono1');
                             } else if (num >= 7 && num <= 12) {
@@ -105,7 +105,7 @@
                     });
                 })
                 .catch(error => {
-                    console.error('Error al cargar el archivo CSV:', error);
+                    console.error('Error al cargar el archivo CSV: ', error);
                 });
         });
     </script>
@@ -118,7 +118,7 @@
             <tr>
                 <th>ID</th>
                 <th>Pais</th>
-                <th>Distrito/Estado/Condado</th>
+                <th>Estado</th>
                 <th>Ciudad</th>
                 <th>Calle</th>
                 <th>Codigo Postal</th>
@@ -129,4 +129,5 @@
         </tbody>
     </table>
 </body>
+
 </html>
