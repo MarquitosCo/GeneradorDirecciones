@@ -80,13 +80,10 @@
                 const num = parseInt(id.slice(1), 10);
 
                 console.log(num)
-                if (num >= 1 && num <= 6) {
-                    row.classList.add('tono1');
-                } else if (num >= 7 && num <= 12) {
-                    row.classList.add('tono2');
-                } else if (num === 13) {
-                    row.classList.add('tono3');
-                }
+               if (num >= 1) {
+    row.classList.add('tono1');
+}
+
 
                 row.innerHTML = `
                     <td class="copyable" data-clipboard-text="${id}">${id}</td>
