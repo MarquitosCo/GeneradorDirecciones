@@ -1,1 +1,65 @@
 
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e; /* Fondo general oscuro */
+    color: #d4d4d4; /* Texto general en blanco/gris claro */
+}
+
+.tono1 {
+    background-color: #2d2d2d; /* Tono más oscuro */
+}
+
+.tono2 {
+    background-color: #3e3e3e; /* Tono intermedio */
+}
+
+.tono3 {
+    background-color: #4f4f4f; /* Tono más claro */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #569cd6; /* Azul claro similar al tema VSCode para el título */
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #252526; /* Fondo de la tabla en gris oscuro */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #3c3c3c; /* Borde gris oscuro */
+    text-align: left;
+    color: #d4d4d4; /* Texto en blanco/gris claro */
+}
+
+th {
+    background-color: #2d2d2d; /* Fondo de las cabeceras en gris más oscuro */
+    color: #d4d4d4; /* Texto blanco/gris claro para las cabeceras */
+}
+
+tr:nth-child(even) {
+    background-color: #333333; /* Gris más oscuro para filas pares */
+}
+
+tr:hover {
+    background-color: #3c3c3c; /* Gris oscuro para hover */
+    color: #ffffff; /* Texto blanco para hover */
+}
+
+.copyable {
+    cursor: pointer;
+    color: #d4d4d4; /* Blanco para los links por defecto */
+}
+
+.copyable:hover {
+    color: #f3f3a3; /* Amarillo claro al pasar el cursor */
+    text-decoration: underline;
+}
