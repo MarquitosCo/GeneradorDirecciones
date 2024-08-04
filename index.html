@@ -31,22 +31,21 @@
             opacity: 0.6;
         }
 
-        /* Tonalidades de fondo para las filas */
+        /* Colores de fondo para diferentes grupos */
         .tono1 {
-            background-color: #2d2d2d; /* Tono más oscuro */
+            background-color: #2d2d2d;
         }
-
         .tono2 {
-            background-color: #3e3e3e; /* Tono intermedio */
+            background-color: #3e3e3e;
         }
-
         .tono3 {
-            background-color: #4f4f4f; /* Tono más claro */
+            background-color: #4f4f4f;
         }
 
-        /* Estilo para celdas al hacer clic */
-        .clicked {
-            background-color: #f39c12 !important; /* Color naranja */
+        /* Color al hacer clic en una celda */
+        td.copied {
+            background-color: #3e3e3e !important; /* Asegura el color cuando se copia */
+            transition: background-color 0.3s ease;
         }
     </style>
     <script>
@@ -57,14 +56,11 @@
             clipboard.on('success', function(e) {
                 e.clearSelection();
 
-                // Cambia el color de la celda al hacer clic
-                const cell = e.trigger;
-                cell.classList.add('clicked');
-                
-                // Vuelve al color original después de 1 segundo
+                // Cambiar el color de la celda copiada
+                e.trigger.classList.add('copied');
                 setTimeout(() => {
-                    cell.classList.remove('clicked');
-                }, 1000); 
+                    e.trigger.classList.remove('copied');
+                }, 1000);
             });
 
             clipboard.on('error', function(e) {
@@ -83,7 +79,6 @@
 
                             // Asignar clases según el ID
                             const num = parseInt(id.slice(1), 10);
-
                             if (num >= 1 && num <= 6) {
                                 row.classList.add('tono1');
                             } else if (num >= 7 && num <= 12) {
@@ -105,7 +100,7 @@
                     });
                 })
                 .catch(error => {
-                    console.error('Error al cargar el archivo CSV:', error);
+                    console.error('Error al cargar el archivo CSV: ', error);
                 });
         });
     </script>
@@ -118,7 +113,7 @@
             <tr>
                 <th>ID</th>
                 <th>Pais</th>
-                <th>Distrito/Estado/Condado</th>
+                <th>Estado</th>
                 <th>Ciudad</th>
                 <th>Calle</th>
                 <th>Codigo Postal</th>
@@ -129,4 +124,5 @@
         </tbody>
     </table>
 </body>
+
 </html>
