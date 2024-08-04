@@ -55,6 +55,6 @@ td.clickable:hover {
 }
 
 td.clicked {
-    background-color: #569cd6 !important;
+    background-color: #f39c12 !important;
     color: #ffffff;
 }
