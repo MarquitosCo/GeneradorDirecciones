@@ -36,6 +36,14 @@ td:nth-child(2) {
     font-weight: bold;
     font-size: 1em;
 }
+
+/* Reducir tamaño de letra y opacidad en la columna Estado */
+td:nth-child(3) {
+    font-size: 0.9em; /* Reduce el tamaño de la letra */
+    opacity: 0.8; /* Ajusta la opacidad al 80% */
+}
+
+
 th {
     background-color: #2d2d2d;
 }
