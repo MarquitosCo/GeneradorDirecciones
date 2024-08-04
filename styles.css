@@ -30,9 +30,11 @@ th, td {
 
 td:first-child {
     font-weight: bold;
-    font-size: 1.2em; /* Aumenta el tamaño del texto de la columna ID */
+    font-size: 1.5em; /* Aumenta el tamaño del texto de la columna ID */
 }
-
+td:nth-child(2) {
+    font-size: 1em; /* Mantiene el tamaño del texto de la columna País */
+}
 th {
     background-color: #2d2d2d;
 }
