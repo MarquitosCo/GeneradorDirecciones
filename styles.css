@@ -36,4 +36,29 @@ th, td {
     padding: 12px;
     border: 1px solid #3c3c3c; /* Borde gris oscuro */
     text-align: left;
-    color: #d4d4d4; /* Texto en bl
+    color: #d4d4d4; /* Texto en blanco/gris claro */
+}
+
+th {
+    background-color: #2d2d2d; /* Fondo de las cabeceras en gris más oscuro */
+    color: #d4d4d4; /* Texto blanco/gris claro para las cabeceras */
+}
+
+tr:nth-child(even) {
+    background-color: #333333; /* Gris más oscuro para filas pares */
+}
+
+tr:hover {
+    background-color: #3c3c3c; /* Gris oscuro para hover */
+    color: #ffffff; /* Texto blanco para hover */
+}
+
+.copyable {
+    cursor: pointer;
+    color: #d4d4d4; /* Blanco para los links por defecto */
+}
+
+.copyable:hover {
+    color: #f3f3a3; /* Amarillo claro al pasar el cursor */
+    text-decoration: underline;
+}
