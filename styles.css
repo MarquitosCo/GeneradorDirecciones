@@ -5,7 +5,7 @@ body {
     background-color: #1e1e1e; /* Fondo general oscuro */
     color: #d4d4d4; /* Texto general en blanco/gris claro */
 }
- 
+
 .tono1 {
     background-color: #2d2d2d; /* Tono más oscuro */
 }
@@ -61,4 +61,8 @@ tr:hover {
 .copyable:hover {
     color: #f3f3a3; /* Amarillo claro al pasar el cursor */
     text-decoration: underline;
+}
+
+td.copied {
+    background-color: #3e3e3e !important; /* Asegurar que el color se aplique al hacer clic */
 }
