@@ -30,20 +30,56 @@
         td:nth-child(3) { /* Columna Estado */
             opacity: 0.6;
         }
-
-        /* Estilos para las tonalidades */
-        .tono1 {
-            background-color: #2d2d2d; /* Tono más oscuro */
-        }
-
-        .tono2 {
-            background-color: #3e3e3e; /* Tono intermedio */
-        }
-
-        .tono3 {
-            background-color: #4f4f4f; /* Tono más claro */
-        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializa clipboard.js
+            const clipboard = new ClipboardJS('.copyable');
+
+            clipboard.on('success', function(e) {
+                e.clearSelection();
+            });
+
+            clipboard.on('error', function(e) {
+                alert('Error al copiar al portapapeles.');
+            });
+
+            // Fetch para cargar el CSV y aplicar los tonos de color
+            fetch('direcciones_generadas.csv')
+                .then(response => response.text())
+                .then(data => {
+                    const lines = data.split('\n');
+                    const tableBody = document.querySelector('#direcciones-table tbody');
+                    lines.slice(1).forEach(line => {
+                        if (line.trim()) {
+                            const [id, pais, estado, ciudad, calle, codigoPostal] = line.split(',');
+                            const row = document.createElement('tr');
+
+                            // Asignar clases según el ID
+                            const num = parseInt(id.slice(1), 10);
+                            if (num >= 1 && num <= 6) {
+                                row.classList.add('tono1');
+                            } else if (num >= 7 && num <= 12) {
+                                row.classList.add('tono2');
+                            } else if (num === 13) {
+                                row.classList.add('tono3');
+                            }
+
+                            row.innerHTML = `
+                                <td class="copyable" data-clipboard-text="${id}">${id}</td>
+                                <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
+                                <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
+                                <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
+                                <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
+                                <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
+                            `;
+                            tableBody.appendChild(row);
+                        }
+                    });
+                })
+                .catch(error => console.error('Error al cargar el archivo CSV:', error));
+        });
+    </script>
 </head>
 
 <body>
@@ -63,62 +99,6 @@
             <!-- Las filas de la tabla se llenarán dinámicamente con JavaScript -->
         </tbody>
     </table>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const clipboard = new ClipboardJS('.copyable');
-
-            clipboard.on('success', function(e) {
-                e.clearSelection();
-            });
-
-            clipboard.on('error', function(e) {
-                alert('Error al copiar al portapapeles.');
-            });
-
-            fetch('direcciones_generadas.csv')
-    .then(response => response.text())
-    .then(data => {
-        const lines = data.split('\n');
-        const tableBody = document.querySelector('#direcciones-table tbody');
-        
-        if (tableBody) {
-            lines.slice(1).forEach(line => {
-                if (line.trim()) {
-                    const [id, pais, estado, ciudad, calle, codigoPostal] = line.split(',');
-                    const row = document.createElement('tr');
-
-                    // Obtener el número de ID sin la letra
-                    const num = parseInt(id.slice(1), 10);
-
-                    // Verificar que num es un número válido
-                    if (!isNaN(num)) {
-                        if (num >= 1 && num <= 6) {
-                            row.classList.add('tono1');
-                        } else if (num >= 7 && num <= 12) {
-                            row.classList.add('tono2');
-                        } else if (num === 13) {
-                            row.classList.add('tono3');
-                        }
-                    }
-
-                    row.innerHTML = `
-                        <td class="copyable" data-clipboard-text="${id}">${id}</td>
-                        <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
-                        <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
-                        <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
-                        <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
-                        <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
-                    `;
-                    tableBody.appendChild(row);
-                }
-            });
-        } else {
-            console.error('El elemento tableBody es null. Verifica que el <tbody> esté presente en el HTML.');
-        }
-    })
-    .catch(error => console.error('Error al cargar el archivo CSV:', error));
-
-        });
-    </script>
 </body>
+
 </html>
