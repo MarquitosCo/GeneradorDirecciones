@@ -31,12 +31,6 @@
             opacity: 0.6;
         }
 
-        /* Estilo para la celda copiada */
-        .copied {
-            background-color: #ffc107; /* Fondo amarillo */
-            color: #1e1e1e; /* Texto oscuro */
-        }
-
         /* Colores de fondo para los rangos de IDs */
         .tono1 {
             background-color: #2d2d2d;
@@ -55,13 +49,6 @@
 
             clipboard.on('success', function(e) {
                 e.clearSelection();
-                
-                // Remover cualquier clase de color anterior
-                const cells = document.querySelectorAll('.copyable');
-                cells.forEach(cell => cell.classList.remove('copied'));
-
-                // Añadir la clase 'copied' a la celda que fue copiada
-                e.trigger.classList.add('copied');
             });
 
             clipboard.on('error', function(e) {
