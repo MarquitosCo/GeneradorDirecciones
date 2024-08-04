@@ -47,40 +47,48 @@
             });
 
             // Cargar y procesar el CSV
-            fetch('direcciones_generadas.csv')
-    .then(response => response.text())
-    .then(data => {
-        const lines = data.split('\n');
-        const tableBody = document.querySelector('#direcciones-table tbody');
-        lines.slice(1).forEach(line => {
-            if (line.trim()) {
-                const [id, pais, estado, ciudad, calle, codigoPostal] = line.split(',');
-                const row = document.createElement('tr');
+            document.addEventListener('DOMContentLoaded', () => {
+    alert('Script cargado correctamente');
+    
+    fetch('direcciones_generadas.csv')
+        .then(response => {
+            console.log("Archivo CSV cargado");
+            return response.text();
+        })
+        .then(data => {
+            const lines = data.split('\n');
+            const tableBody = document.querySelector('#direcciones-table tbody');
+            lines.slice(1).forEach(line => {
+                if (line.trim()) {
+                    const [id, pais, estado, ciudad, calle, codigoPostal] = line.split(',');
+                    const row = document.createElement('tr');
 
-                // Asignar clases según el ID
-                const num = parseInt(id.slice(1), 10);
-                console.log(`ID: ${id}, Número: ${num}`);
+                    // Asignar clases según el ID
+                    const num = parseInt(id.slice(1), 10);
+                    console.log(`ID: ${id}, Número: ${num}`);
 
-                if (num >= 1 && num <= 6) {
-                    row.classList.add('tono1');
-                } else if (num >= 7 && num <= 12) {
-                    row.classList.add('tono2');
-                } else if (num === 13) {
-                    row.classList.add('tono3');
+                    if (num >= 1 && num <= 6) {
+                        row.classList.add('tono1');
+                    } else if (num >= 7 && num <= 12) {
+                        row.classList.add('tono2');
+                    } else if (num === 13) {
+                        row.classList.add('tono3');
+                    }
+
+                    row.innerHTML = `
+                        <td class="copyable" data-clipboard-text="${id}">${id}</td>
+                        <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
+                        <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
+                        <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
+                        <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
+                        <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
+                    `;
+                    tableBody.appendChild(row);
                 }
-
-                row.innerHTML = `
-                    <td class="copyable" data-clipboard-text="${id}">${id}</td>
-                    <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
-                    <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
-                    <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
-                    <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
-                    <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
-                `;
-                tableBody.appendChild(row);
-            }
-        });
-    });
+            });
+        })
+        .catch(error => console.error('Error al cargar el archivo CSV:', error));
+});  // <- Cierra correctamente el addEventListener
 
     </script>
 </head>
