@@ -36,6 +36,17 @@
             background-color: #ffc107; /* Fondo amarillo */
             color: #1e1e1e; /* Texto oscuro */
         }
+
+        /* Colores de fondo para los rangos de IDs */
+        .tono1 {
+            background-color: #2d2d2d;
+        }
+        .tono2 {
+            background-color: #3e3e3e;
+        }
+        .tono3 {
+            background-color: #4f4f4f;
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -95,7 +106,7 @@
                     row.classList.add('tono1');
                 } else if (num >= 7 && num <= 12) {
                     row.classList.add('tono2');
-                } else if (num == 13) {
+                } else if (num === 13) {
                     row.classList.add('tono3');
                 }
 
