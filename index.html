@@ -30,6 +30,19 @@
         td:nth-child(3) { /* Columna Estado */
             opacity: 0.6;
         }
+
+        /* Tonos personalizados */
+        .tono1 {
+            background-color: #2d2d2d; /* Tono más oscuro */
+        }
+
+        .tono2 {
+            background-color: #3e3e3e; /* Tono intermedio */
+        }
+
+        .tono3 {
+            background-color: #4f4f4f; /* Tono más claro */
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -56,12 +69,14 @@
                             const row = document.createElement('tr');
 
                             // Asignar clases según el ID
-                            const num = parseInt(id.slice(1), 10);
-                            if (num >= 1 && num <= 6) {
+                            const letra = id.charAt(0);
+                            const numero = parseInt(id.slice(1), 10);
+
+                            if (numero >= 1 && numero <= 6) {
                                 row.classList.add('tono1');
-                            } else if (num >= 7 && num <= 12) {
+                            } else if (numero >= 7 && numero <= 12) {
                                 row.classList.add('tono2');
-                            } else if (num === 13) {
+                            } else if (numero === 13) {
                                 row.classList.add('tono3');
                             }
 
