@@ -31,7 +31,7 @@ table {
     background-color: #252526; /* Fondo de la tabla en gris oscuro */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
-
+ 
 th, td {
     padding: 12px;
     border: 1px solid #3c3c3c; /* Borde gris oscuro */
