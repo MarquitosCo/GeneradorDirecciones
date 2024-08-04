@@ -8,16 +8,17 @@ body {
 
 
 .tono1 {
-    background-color: #333333; /* Tonalidad 1 */
+    background-color: #2d2d2d; /* Tono más oscuro */
 }
 
 .tono2 {
-    background-color: #3a3a3a; /* Tonalidad 2 */
+    background-color: #3e3e3e; /* Tono intermedio */
 }
 
 .tono3 {
-    background-color: #424242; /* Tonalidad 3 */
+    background-color: #4f4f4f; /* Tono más claro */
 }
+
 
 
 h1 {
