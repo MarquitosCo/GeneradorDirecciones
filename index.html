@@ -24,6 +24,7 @@
         td:first-child, /* Columna ID */
         td:nth-child(2)  /* Columna País */ {
             font-weight: bold;
+            font-size: 1.1em; /* Aumentar tamaño de letra */
         }
 
         /* Menos visibilidad para la columna Estado */
@@ -31,21 +32,21 @@
             opacity: 0.6;
         }
 
-        /* Colores de fondo para diferentes grupos */
+        /* Tonos diferentes según el ID */
         .tono1 {
-            background-color: #2d2d2d;
-        }
-        .tono2 {
-            background-color: #3e3e3e;
-        }
-        .tono3 {
-            background-color: #4f4f4f;
+            background-color: #2d2d2d; /* Tono más oscuro */
         }
 
-        /* Color al hacer clic en una celda */
-        td.copied {
-            background-color: #3e3e3e !important; /* Asegura el color cuando se copia */
-            transition: background-color 0.3s ease;
+        .tono2 {
+            background-color: #3e3e3e; /* Tono intermedio */
+        }
+
+        .tono3 {
+            background-color: #4f4f4f; /* Tono más claro */
+        }
+
+        .highlight {
+            background-color: #ffeb3b !important; /* Color amarillo al hacer clic */
         }
     </style>
     <script>
@@ -55,53 +56,21 @@
 
             clipboard.on('success', function(e) {
                 e.clearSelection();
-
-                // Cambiar el color de la celda copiada
-                e.trigger.classList.add('copied');
-                setTimeout(() => {
-                    e.trigger.classList.remove('copied');
-                }, 1000);
             });
 
             clipboard.on('error', function(e) {
                 alert('Error al copiar al portapapeles.');
             });
 
-            fetch('direcciones_generadas.csv')
-                .then(response => response.text())
-                .then(data => {
-                    const lines = data.split('\n');
-                    const tableBody = document.querySelector('#direcciones-table tbody');
-                    lines.slice(1).forEach(line => {
-                        if (line.trim()) {
-                            const [id, pais, estado, ciudad, calle, codigoPostal] = line.split(',');
-                            const row = document.createElement('tr');
-
-                            // Asignar clases según el ID
-                            const num = parseInt(id.slice(1), 10);
-                            if (num >= 1 && num <= 6) {
-                                row.classList.add('tono1');
-                            } else if (num >= 7 && num <= 12) {
-                                row.classList.add('tono2');
-                            } else if (num === 13) {
-                                row.classList.add('tono3');
-                            }
-
-                            row.innerHTML = `
-                                <td class="copyable" data-clipboard-text="${id}">${id}</td>
-                                <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
-                                <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
-                                <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
-                                <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
-                                <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
-                            `;
-                            tableBody.appendChild(row);
-                        }
-                    });
-                })
-                .catch(error => {
-                    console.error('Error al cargar el archivo CSV: ', error);
+            // Cambiar el color de la celda al hacer clic
+            document.querySelectorAll('.copyable').forEach(cell => {
+                cell.addEventListener('click', () => {
+                    cell.classList.add('highlight');
+                    setTimeout(() => {
+                        cell.classList.remove('highlight');
+                    }, 1000);
                 });
+            });
         });
     </script>
 </head>
@@ -123,6 +92,41 @@
             <!-- Las filas de la tabla se llenarán dinámicamente con JavaScript -->
         </tbody>
     </table>
+    <script>
+      fetch('direcciones_generadas.csv')
+        .then(response => response.text())
+        .then(data => {
+            const lines = data.split('
+');
+            const tableBody = document.querySelector('#direcciones-table tbody');
+            lines.slice(1).forEach(line => {
+                if (line.trim()) {
+                    const [id, pais, estado, ciudad, calle, codigoPostal] = line.split(',');
+                    const row = document.createElement('tr');
+
+                    // Asignar clases según el ID
+                    const num = parseInt(id.slice(1), 10);
+                    if (num >= 1 && num <= 6) {
+                        row.classList.add('tono1');
+                    } else if (num >= 7 && num <= 12) {
+                        row.classList.add('tono2');
+                    } else if (num === 13) {
+                        row.classList.add('tono3');
+                    }
+
+                    row.innerHTML = `
+                        <td class="copyable" data-clipboard-text="${id}">${id}</td>
+                        <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
+                        <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
+                        <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
+                        <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
+                        <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
+                    `;
+                    tableBody.appendChild(row);
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
