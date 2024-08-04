@@ -8,47 +8,25 @@
     <title>Direcciones Falsas</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.10/clipboard.min.js"></script>
-    <style>
-        .copyable {
-            cursor: pointer;
-            color: #d4d4d4; /* Blanco por defecto */
-            text-decoration: none; /* Evitar subrayado por defecto */
-        }
+</head>
 
-        .copyable:hover {
-            color: #f3f3a3; /* Amarillo claro al pasar el cursor */
-            text-decoration: underline;
-        }
-
-        /* Negritas en las columnas ID y País */
-        td:first-child, /* Columna ID */
-        td:nth-child(2)  /* Columna País */ {
-            font-weight: bold;
-        }
-
-        /* Menos visibilidad para la columna Estado */
-        td:nth-child(3) { /* Columna Estado */
-            opacity: 0.6;
-        }
-
-        /* Estilos para los tonos */
-        .tono1 {
-            background-color: #2d2d2d; /* Tono más oscuro */
-        }
-
-        .tono2 {
-            background-color: #3e3e3e; /* Tono intermedio */
-        }
-
-        .tono3 {
-            background-color: #4f4f4f; /* Tono más claro */
-        }
-
-        /* Estilo de celda clickeada */
-        .clicked {
-            background-color: #007acc !important; /* Cambia el color al hacer clic */
-        }
-    </style>
+<body>
+    <h1>Direcciones Falsas</h1>
+    <table id="direcciones-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Pais</th>
+                <th>Distrito/Estado/Condado</th>
+                <th>Ciudad</th>
+                <th>Calle</th>
+                <th>Codigo Postal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las filas de la tabla se llenarán dinámicamente con JavaScript -->
+        </tbody>
+    </table>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Inicializa clipboard.js
@@ -56,10 +34,10 @@
 
             clipboard.on('success', function(e) {
                 e.clearSelection();
-                const target = e.trigger;
-                target.classList.add('clicked');
+                // Cambiar temporalmente el color de la celda
+                e.trigger.classList.add('clicked');
                 setTimeout(() => {
-                    target.classList.remove('clicked');
+                    e.trigger.classList.remove('clicked');
                 }, 1000);
             });
 
@@ -67,7 +45,6 @@
                 alert('Error al copiar al portapapeles.');
             });
 
-            // Cargar el archivo CSV y generar la tabla
             fetch('direcciones_generadas.csv')
                 .then(response => response.text())
                 .then(data => {
@@ -79,6 +56,7 @@
                             const row = document.createElement('tr');
 
                             const num = parseInt(id.slice(1), 10);
+
                             if (num >= 1 && num <= 6) {
                                 row.classList.add('tono1');
                             } else if (num >= 7 && num <= 12) {
@@ -88,41 +66,22 @@
                             }
 
                             row.innerHTML = `
-                                <td class="copyable" data-clipboard-text="${id}">${id}</td>
-                                <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
-                                <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
-                                <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
-                                <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
-                                <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
+                                <td class="copyable clickable" data-clipboard-text="${id}">${id}</td>
+                                <td class="copyable clickable" data-clipboard-text="${pais}">${pais}</td>
+                                <td class="copyable clickable" data-clipboard-text="${estado}">${estado}</td>
+                                <td class="copyable clickable" data-clipboard-text="${ciudad}">${ciudad}</td>
+                                <td class="copyable clickable" data-clipboard-text="${calle}">${calle}</td>
+                                <td class="copyable clickable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
                             `;
                             tableBody.appendChild(row);
                         }
                     });
                 })
                 .catch(error => {
-                    console.error('Error al cargar el archivo CSV: ', error);
+                    console.error('Error al cargar el archivo CSV:', error);
                 });
         });
     </script>
-</head>
-
-<body>
-    <h1>Direcciones Falsas</h1>
-    <table id="direcciones-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Pais</th>
-                <th>Estado</th>
-                <th>Ciudad</th>
-                <th>Calle</th>
-                <th>Codigo Postal</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Las filas de la tabla se llenarán dinámicamente con JavaScript -->
-        </tbody>
-    </table>
 </body>
 
 </html>
