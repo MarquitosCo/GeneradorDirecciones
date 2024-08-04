@@ -20,13 +20,9 @@
             text-decoration: underline;
         }
 
-        /* Negritas en las columnas ID y País, y agrandar el tamaño de letra en la columna ID */
-        td:first-child { /* Columna ID */
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        td:nth-child(2) { /* Columna País */
+        /* Negritas en las columnas ID y País */
+        td:first-child, /* Columna ID */
+        td:nth-child(2)  /* Columna País */ {
             font-weight: bold;
         }
 
@@ -35,10 +31,22 @@
             opacity: 0.6;
         }
 
-        /* Color al hacer click en una celda */
-        td.copied {
-            background-color: #3e3e3e; /* Color de fondo cuando se copia */
-            transition: background-color 0.3s ease;
+        /* Tonalidades de fondo para las filas */
+        .tono1 {
+            background-color: #2d2d2d; /* Tono más oscuro */
+        }
+
+        .tono2 {
+            background-color: #3e3e3e; /* Tono intermedio */
+        }
+
+        .tono3 {
+            background-color: #4f4f4f; /* Tono más claro */
+        }
+
+        /* Estilo para celdas al hacer clic */
+        .clicked {
+            background-color: #f39c12 !important; /* Color naranja */
         }
     </style>
     <script>
@@ -49,16 +57,56 @@
             clipboard.on('success', function(e) {
                 e.clearSelection();
 
-                // Cambiar el color de la celda copiada
-                e.trigger.classList.add('copied');
+                // Cambia el color de la celda al hacer clic
+                const cell = e.trigger;
+                cell.classList.add('clicked');
+                
+                // Vuelve al color original después de 1 segundo
                 setTimeout(() => {
-                    e.trigger.classList.remove('copied');
-                }, 1000);
+                    cell.classList.remove('clicked');
+                }, 3000); 
             });
 
             clipboard.on('error', function(e) {
                 alert('Error al copiar al portapapeles.');
             });
+
+            fetch('direcciones_generadas.csv')
+                .then(response => response.text())
+                .then(data => {
+                    const lines = data.split('\n');
+                    const tableBody = document.querySelector('#direcciones-table tbody');
+                    lines.slice(1).forEach(line => {
+                        if (line.trim()) {
+                            const [id, pais, estado, ciudad, calle, codigoPostal] = line.split(',');
+                            const row = document.createElement('tr');
+
+                            // Asignar clases según el ID
+                            const num = parseInt(id.slice(1), 10);
+
+                            if (num >= 1 && num <= 6) {
+                                row.classList.add('tono1');
+                            } else if (num >= 7 && num <= 12) {
+                                row.classList.add('tono2');
+                            } else if (num === 13) {
+                                row.classList.add('tono3');
+                            }
+
+                            row.innerHTML = `
+                                <td class="copyable" data-clipboard-text="${id}">${id}</td>
+                                <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
+                                <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
+                                <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
+                                <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
+                                <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
+                            `;
+                            tableBody.appendChild(row);
+                        }
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar el archivo CSV:', error);
+                });
         });
     </script>
 </head>
@@ -70,7 +118,7 @@
             <tr>
                 <th>ID</th>
                 <th>Pais</th>
-                <th>Estado</th>
+                <th>Distrito/Estado/Condado</th>
                 <th>Ciudad</th>
                 <th>Calle</th>
                 <th>Codigo Postal</th>
@@ -79,41 +127,6 @@
         <tbody>
             <!-- Las filas de la tabla se llenarán dinámicamente con JavaScript -->
         </tbody>
-    </table> 
-    <script>
-        fetch('direcciones_generadas.csv')
-        .then(response => response.text())
-        .then(data => {
-            const lines = data.split('\n');
-            const tableBody = document.querySelector('#direcciones-table tbody');
-            lines.slice(1).forEach(line => {
-                if (line.trim()) {
-                    const [id, pais, estado, ciudad, calle, codigoPostal] = line.split(',');
-                    const row = document.createElement('tr');
-
-                    // Asignar clases según el ID
-                    const num = parseInt(id.slice(1), 10);
-                    if (num >= 1 && num <= 6) {
-                        row.classList.add('tono1');
-                    } else if (num >= 7 && num <= 12) {
-                        row.classList.add('tono2');
-                    } else if (num === 13) {
-                        row.classList.add('tono3');
-                    }
-
-                    row.innerHTML = `
-                        <td class="copyable" data-clipboard-text="${id}">${id}</td>
-                        <td class="copyable" data-clipboard-text="${pais}">${pais}</td>
-                        <td class="copyable" data-clipboard-text="${estado}">${estado}</td>
-                        <td class="copyable" data-clipboard-text="${ciudad}">${ciudad}</td>
-                        <td class="copyable" data-clipboard-text="${calle}">${calle}</td>
-                        <td class="copyable" data-clipboard-text="${codigoPostal}">${codigoPostal}</td>
-                    `;
-                    tableBody.appendChild(row);
-                }
-            });
-        });
-    </script>
+    </table>
 </body>
-
 </html>
