@@ -5,10 +5,6 @@ body {
     background-color: #1e1e1e; /* Fondo general oscuro */
     color: #d4d4d4; /* Texto general en blanco/gris claro */
 }
-.copied {
-    background-color: #ffc107; /* Color de fondo amarillo similar al usado en el hover */
-    color: #1e1e1e; /* Cambia el color del texto si es necesario */
-}
 
 .tono1 {
     background-color: #2d2d2d; /* Tono más oscuro */
@@ -35,34 +31,9 @@ table {
     background-color: #252526; /* Fondo de la tabla en gris oscuro */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
- 
+
 th, td {
     padding: 12px;
     border: 1px solid #3c3c3c; /* Borde gris oscuro */
     text-align: left;
-    color: #d4d4d4; /* Texto en blanco/gris claro */
-}
-
-th {
-    background-color: #2d2d2d; /* Fondo de las cabeceras en gris más oscuro */
-    color: #d4d4d4; /* Texto blanco/gris claro para las cabeceras */
-}
-
-tr:nth-child(even) {
-    background-color: #333333; /* Gris más oscuro para filas pares */
-}
-
-tr:hover {
-    background-color: #3c3c3c; /* Gris oscuro para hover */
-    color: #ffffff; /* Texto blanco para hover */
-}
-
-.copyable {
-    cursor: pointer;
-    color: #d4d4d4; /* Blanco para los links por defecto */
-}
-
-.copyable:hover {
-    color: #f3f3a3; /* Amarillo claro al pasar el cursor */
-    text-decoration: underline;
-}
+    color: #d4d4d4; /* Texto en bl
