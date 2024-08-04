@@ -28,6 +28,11 @@ th, td {
     color: #d4d4d4;
 }
 
+td:first-child {
+    font-weight: bold;
+    font-size: 1.2em; /* Aumenta el tamaño del texto de la columna ID */
+}
+
 th {
     background-color: #2d2d2d;
 }
