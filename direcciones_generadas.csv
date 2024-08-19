@@ -1,80 +1,79 @@
 ID,Pais,Estado/Distrito/Región,Ciudad,Calle (con el número),Código Postal
-A01,Moldova,Chișinău,Chișinău,Strada Bucuriei 10,2004
-A02,Belgium,Bruxelles,Molenbeek-Saint-Jean,Avenue du Château 1,1080
-A03,United Kingdom,England,HM Naval Base,College Road 19,PO1 3LJ
-A04,Portugal,Beja,Beja,Estrada das Apolinarias 2,7800-050
-A05,Moldova,Chișinău,Chișinău,Strada Serghei Lazo 13,2004
-A06,Hungary,Tolna,Harkány,Vörösmarty mihály 843,5957
-A07,Croatia,Primorsko-goranska županija,Rijeka,Pletenci 42,51000
-A08,Czech Republic,Moravskoslezský,Blovice,Nám. Jiřího Z Poděbrad 562,295 26
-A09,Cyprus,Limassol,Limassol,Rısou 1,3048
-A10,Ireland,County Louth,Drogheda,Ballymakenny Road 77,A92 AT2X
-A11,Czech Republic,Liberecký,Jičín,Nám. Československé Armády 706,148 76
-A12,Bulgaria,Plovdiv,Plovdiv,"ulitsa ""Bunaya"" 5",4006
-A13,Iceland,Reykjavíkurborg,Reykjavík,Klyfjasel 30,109
-B01,Latvia,Mārupes novads,"Lidosta ""Rīga""",Biroju iela 10,1053
-B02,Spain,Castilla-La Mancha,Albacete,Terreno Diseminados 2567,02006
-B03,Slovakia,Bratislavský kraj,Nové Mesto,Pionierska 9/A,831 02
-B04,Switzerland,Luzern,Horw,Seestrasse 30,6047
-B05,Ukraine,L'vivs'ka oblast,L'viv,Malogoloskivska Street 45,79000
-B06,Slovenia,Trnavský,Topoľčany,Prokopova ulica 790,874 29
-B07,Georgia,Tbilisi,T'bilisi,Station Square 1,0102
-B08,Latvia,Tukuma novads,Tukums,Pārupes iela 28,3101
-B09,Czech Republic,Olomoucký,Březnice,Pitašova 694,567 01
-B10,Sweden,Skåne län,Fosie,Pinjegatan 6,213 63
-B11,Ukraine,Zaporiz'ka oblast,Zaporizhzhia,Hvardiis'kyi Boulevard 28,69061
-B12,Netherlands,Noord-Holland,Hilversum,Noodweg 1,1213 PV
-B13,France,Bourgogne-Franche-Comté,Besançon,Chemin des Montboucons 31,25000
-C01,Sweden,Västra Götalands län,Lunden,Lillatorpsgatan 19,416 55
-C02,Estonia,Harju maakond,Kloogaranna,Allika tee 3,76708
-C03,Portugal,Braga,Guimarães,Rua Fonte de Aviz 747,4805
-C04,Denmark,Nordjylland,Terndrup,Skipper Clements Allé 1342,DK-3758
-C05,Finland,Keski-Suomi,Jyväskylä,Rauhaniementie 9,40400
-C06,Georgia,Missouri,Culver City,Banks 362,99571
-C07,Luxembourg,Mersch,Mersch,Rue de Keispelt 9,7473
-C08,Italy,Sicilia,Palermo,Fondo Alfano 7,90124
-C09,Germany,Hessen,Kassel,Töniesweg 27,34127
-C10,Spain,Andalucía,Granada,Barrio Pt 164,18008
-C11,Lithuania,Tauragės apskritis,Payžnio kaimas,Yžnės gatvė 13,75492
-C12,Hungary,Vas,Dévaványa,Szabolcska mihály 1200,4346
-C13,Finland,Uusimaa,Espoo,Kuninkaantie 12,02740
-D01,Greece,Θεσσαλία,Θέρμη,Τράλλεων 780,86973
-D02,Georgia,Kvemo Kartli,Velispiri,მე-8 ქუჩის I ჩიხი 1,1700
-D03,Poland,Województwo śląskie,Częstochowa,Konwaliowa 241a,42-280
-D04,Netherlands,Noord-Holland,Heemstede,Iepenlaan 31,2101 WT
-D05,Portugal,Porto,Porto,Rua de Godim 38,4300-201
-D06,Bulgaria,Varna,Varna,улица Цар Симеон I 42,9102
-D07,Cyprus,Nicosia,Tseri,Lakatamias 9,2480
-D08,Poland,Województwo warmińsko-mazurskie,Olsztyn,Wojciecha Kętrzyńskiego 9,11-041
-D09,United Kingdom,England,Anfield,Stanley Park Avenue South 310,L4 7XF
-D10,Norway,Oslo,Sankt Hanshaugen,Pilestredet Park 18,0176
-D11,Finland,Pirkanmaa,Tampere,Puuvillatehtaankatu 8,33210
-D12,Denmark,Syddanmark,Henne,Byvej 1070,DK-0434
-D13,Greece,Θεσσαλία,Λιβαδειά,Καλλιρρόης 238,12270
-E01,Switzerland,Vaud,Epalinges,Chemin du Bois-Murat 32,1066
-E02,Switzerland,Graubünden,Chur,Grossbruggerweg 1,7000
-E03,Ukraine,Zaporiz'ka oblast,Zaporizhzhia,Heroiv 55-i bryhady Street 6/2,69000
-E04,Georgia,Tbilisi,T'bilisi,Otar Kapanadze Street 4,0132
-E05,Luxembourg,Luxembourg,Luxembourg,Rue Cents 153a,1319
-E06,Ireland,County Cork,Cork,Temple Hill Lawn 8,T12 EY2E
-E07,Slovakia,Košický kraj,Barca,Ľanová 12,040 17
-E08,Germany,Hessen,Neu-Isenburg,Mitteldicker Weg 1,63263
-E09,Georgia,Kentucky,Battle Ground,Division 223,27389
-E10,Georgia,Alaska,Brookings,France 531,75172
-E11,Andorra,La Massana,Xixerella,Camí Xixerella 41,AD400
-E12,MC,Vermont,Simpsonville,Pizarro 49,73471
-F01,Ireland,County Clare,Ardnacrusha,Blackwater Demesne 14,V94 634X
-F02,Cyprus,Nicosia,Strovolos,Efrosynis 3A,2048
-F03,Poland,Województwo małopolskie,Kraków,Gaik 42,31-338
-F04,Belgium,Région Wallonne,Namur,Rue des Prêles 9,5002
-F05,Czech Republic,Středočeský,Domažlice,Lískovecká 740,072 99
-F06,France,Auvergne-Rhône-Alpes,Lyon,Cours Franklin Roosevelt 13,69006
-F07,Bulgaria,Burgas,Burgas,"ploshtad ""Troykata"" 1",8000
-F08,Lithuania,Klaipėdos apskritis,Klaipėda,Eglių gatvė 14,92353
-F09,Austria,Steiermark,Graz,Jägerweg 44,8041
-F10,France,Provence-Alpes-Côte d'Azur,Nice,Chemin des Treuyes 30,06200
-F11,Norway,Agder,Vågsbygd,Fiskåveien 16,4621
-F12,United Kingdom,Wales,Llanishen,Lambourne Crescent 4,CF14 5GF
-F13,United Kingdom,England,Grantchester,High Street 44,CB3 9NF
-REM,Moldova,Хабаровский край,Тулун,Оренбургская 382,353002
-REM2,Switzerland,Luzern,Obernau,Schlossberg 150,6012
+A01,Croatia,Zadarska županija,Zadar,Put kotarskih serdara 60B,23000
+A02,Slovakia,Trenčiansky kraj,Lehota pod Vtáčnikom,4. apríla 37,972 42
+A03,Spain,Castilla-La Mancha,Albacete,Terreno Diseminados 125,02008
+A04,Sweden,Skåne län,Gunnesbo,Nöbbelövs Mossaväg 4,226 55
+A05,Greece,Νησιά Αιγαίου Πελάγους,Άρτα,Λαοδικείας 576,49316
+A06,Czech Republic,Ústecký,Břidličná,V Dolích 540,404 53
+A07,Denmark,Midtjylland,Hårlev,Skolebakkevej 903,DK-5413
+A08,Ireland,County Kildare,Naas,Stephenstown Gate 3,W91 E520
+A09,Cyprus,Nicosia,Strovolos,Kalamatas 12,2002
+A10,Slovenia,Banskobystrický,Humenné,Plánky 579,686 68
+A11,Portugal,Coimbra,Coimbra,Rua Aluvada 87,3000
+A12,Bulgaria,Sofia City Province,Sofia,"Boulevard ""Cherni vrah"" 47",1421
+A13,Iceland,Reykjavíkurborg,Reykjavík,Ægisgarður 101,101
+B01,Ireland,Contae Luimnigh,Luimneach,Cois Na Sionainne 2,V94 02E4
+B02,Switzerland,Vaud,Romanel-sur-Lausanne,Chemin des Epinettes 1,1032
+B03,Andorra,Canillo,L'Aldosa de Canillo,CG-2 71,AD100
+B04,Switzerland,Sankt Gallen,St. Gallen,Spiltrücklistrasse 20,9011
+B05,Ukraine,Donets'ka oblast,Donetsk,Stadionna Street 1б,83000
+B06,Slovenia,Bratislavský,Stará Turá,Družstevná ulica 189,474 05
+B07,Georgia,Imereti,Kutaisi,Leselidze I Drive 9,4600
+B08,Latvia,Tukuma novads,Tukums,Tīles iela 6,3101
+B09,Czech Republic,Plzeňský,Domažlice,U Bělé 276,023 73
+B10,Sweden,Stockholms län,Södermalm,Katarinavägen 21,116 45
+B11,Ukraine,Zaporiz'ka oblast,Zaporizhzhia,Betonna Street 4,69000
+B12,Netherlands,Zuid-Holland,Rotterdam,Kleiweg 248,3051 SN
+B13,France,Hauts-de-France,Lesquin,Impasse Jean Jaurès 14,59810
+C01,Sweden,Stockholms län,Enskede-Årsta-Vantör,Tussmötevägen 302,125 74
+C02,Estonia,Harju maakond,Tallinn,Kopli 68,10412
+C03,Portugal,Coimbra,Antanhol,Estrada Principal 12,3040
+C04,Denmark,Syddanmark,Sjællands Odde,Højsager Plads 1375,DK-8362
+C05,Finland,Keski-Suomi,Jyväskylä,Oitinmäentie 36,41880
+C06,Georgia,Wyoming,Morganton,Forest Side 682,90492
+C07,Luxembourg,Luxembourg,Luxembourg,Rue des Muguets 62,2167
+C08,Italy,Veneto,Conscio,Via Don Dionisio Visentin 21,31032
+C09,Germany,Nordrhein-Westfalen,Köln,Waterloostraße 12,50733
+C10,Spain,Andalucía,Córdoba,Avenida Isla Fuerteventura 11,14011
+C11,Lithuania,Šiaulių apskritis,Šiauliai,Baltų gatvė 2F,78149
+C12,Hungary,Nógrád,Budakeszi,Erkel ferenc 894,3811
+C13,Finland,Kanta-Häme,Riihimäki,Mikontie 1,11910
+D01,Greece,Ήπειρος,Γλυκά Νερά,Στρυμώνος 1341,57281
+D02,Georgia,Samegrelo-Zemo Svaneti,Pirveli Moidanakhe,37-ე ქუჩა 139,5015
+D03,Poland,Województwo małopolskie,Kraków,Kazimierza Odnowiciela 110,31-481
+D04,Netherlands,Noord-Brabant,Eindhoven,Tempellaan 93,5628 ZR
+D05,Portugal,Leiria,Leiria,Rua Manuel Jorge 120,2415-371
+D06,Bulgaria,Plovdiv,Plovdiv,"улица ""Петър Каназирски"" 238",4023
+D07,Cyprus,Limassol,Limassol,Agriniou 4,3066
+D08,Poland,Województwo wielkopolskie,Poznań,Boranta 24,61-608
+D09,United Kingdom,England,North End,Kingston Crescent 7,PO2 8AA
+D10,Norway,Oslo,Nordstrand,Jomfrubråtveien 73,1179
+D11,Finland,Uusimaa,Helsinki,Parrukatu 1,00540
+D12,Denmark,Midtjylland,Lem,Kirkeltevej 648,DK-7628
+D13,Greece,Στερεά Ελλάδα,Κοζάνη,Καβελάρη 372,24417
+E01,Switzerland,Vaud,Renens,Sur la Croix 15,1020
+E02,Switzerland,Luzern,Emmen,Seetalstrasse 4B,6020
+E03,Ukraine,Kyiv,Kyiv,Budindustrii Street 6,02000
+E04,Georgia,Colorado,Muskogee,Adele 1088,71100
+E05,Luxembourg,Mersch,Lintgen,Rue de Gosseldange 79,7432
+E06,Ireland,County Cork,Cork,Mount Vernon Crescent 30,T12 Y6WC
+E07,Slovakia,Bratislavský kraj,Nové Mesto,Kamzík-Les 1/A,831 01
+E08,Germany,Baden-Württemberg,Ulm,Kellerhalde 18,89081
+E09,Georgia,Georgia,Poway,Alta Vista 169,89886
+E10,Georgia,Imereti,Kutaisi,ახალი ქუჩა 12,4600
+E11,Andorra,Canillo,Meritxell,CG-2 1,AD100
+E12,MC,Massachusetts,Gaithersburg,Thornton 936,43720
+F01,Ireland,County Sligo,Sligo,Thornhill 21,F91 KD8H
+F02,Cyprus,Limassol,Germasogeia,Dionysiou Kykkoti 30,4043
+F03,Poland,Województwo dolnośląskie,Wrocław,Strączkowa 29,52-214
+F04,Belgium,Bruxelles,Evere,Rue de Paris 1,1140
+F05,Czech Republic,Kraj Vysočina,Brtnice,Vílová 671,796 47
+F06,France,Auvergne-Rhône-Alpes,Lyon,Quai Rambaud 11,69002
+F07,Bulgaria,Sofia City Province,Sofia,"""Tsar Boris III"" Boulevard 54",1612
+F08,Lithuania,Tauragės apskritis,Pakoplyčis,Pievų gatvė 1,75200
+F09,Austria,Wien,Wien,Baumgasse 20A,1030
+F10,France,Auvergne-Rhône-Alpes,Caluire-et-Cuire,Cours Aristide Briand 23,69300
+F11,Norway,Buskerud,Strømsø,Aabys gate 1,3041
+F12,United Kingdom,England,Chapel Allerton,Carrholm Crescent 17,LS7 2NL
+F13,United Kingdom,England,Sheffield City Centre,Arundel Gate 50,S1 2PR
+REM2,Switzerland,Fribourg,Bois-d'Amont,Route de la Fenetta 34,1731
