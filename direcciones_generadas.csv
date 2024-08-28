@@ -1,81 +1,57 @@
 ID,Pais,Estado/Distrito/Región,Ciudad,Calle (con el número),Código Postal
-A01,Lithuania,Klaipėdos apskritis,Klaipėda,Burių gatvė 19,92276
-A02,Lithuania,Vilniaus apskritis,Vilnius,Eišiškių plentas 127,02185
-A03,Italy,Emilia-Romagna,case sparse,Via di Casaglia 45,40135
-A04,Lithuania,Alytaus apskritis,Sudvajai,Sudvajų gatvė 31,64201
-A05,Denmark,Nordjylland,Dybvad,I P Hartmanns Vej 795,DK-9482
-A06,Norway,Agder,Vågsbygd,Fiskåveien 7,4621
-A07,Portugal,Coimbra,Almalaguês,Rua Fonte 18,3040
-A08,Germany,Bayern,München,Leipartstraße 2,81369
-A09,Luxembourg,Luxembourg,Steinsel,Rue des Prés 60,7333
-A10,Switzerland,Luzern,Luzern,Büttenenstrasse 25C,6006
-A11,Georgia,Florida,Florissant,Rockland 108,17305
-A12,Belgium,Bruxelles,Bruxelles,Avenue Jules van Praet 9671,1020
-A13,Belgium,Bruxelles,Uccle,Bosveldweg 59,1180
-B01,Georgia,Imereti,Kutaisi,Leselidze II Aly. 9,4600
-B02,France,Auvergne-Rhône-Alpes,Villeurbanne,Chemin de la Feyssine 2,69100
-B03,Bulgaria,Burgas,Burgas,"bulevard ""Transportna"" 45",8008
-B04,Austria,Wien,Wien,Per-Albin-Hansson-Straße 129,1100
-B05,Denmark,Nordjylland,Ebberup,Hannovergade 926,DK-3937
-B06,Andorra,Escaldes-Engordany,Engolasters,Carretera d'Engolasters 507b,AD700
-B07,Czech Republic,Olomoucký,Janov,V Kapradí 51,019 74
-B08,Netherlands,Noord-Holland,Hilversum,Kees Buurmanlaan 68,1217 GL
-B09,Switzerland,Vaud,Epalinges,Chemin de la Possession 6,1066
-B10,Cyprus,Nicosia,Nicosia,Nikiforou Foka 5,1036
-B11,Finland,Uusimaa,Espoo,Veljeskuja 4,02770
-B12,Greece,Θράκη,Κιλκίς,Ρόδου 861,69540
-B13,Germany,Hessen,Kassel,Otto-Bähr-Straße 18,34128
-C01,Switzerland,Basel-Stadt,Basel,Hüningerstrasse 43,4056
-C02,Georgia,Kvemo Kartli,Velispiri,1st Street I Lane 7,1700
-C03,Moldova,Chișinău,Chișinău,Strada Ciuflea 28,2001
-C04,Finland,Keski-Suomi,Jyväskylä,Raivionmutka 13,40520
-C05,Austria,Wien,Wien,Ferdinand-Platzer-Gasse 1,1210
-C06,Croatia,Istarska županija,Pula,Valmade 58,52100
-C07,Latvia,Talsu novads,Talsi,Darba iela 13A,3201
-C08,Estonia,Harju maakond,Tallinn,Paadi 14a,10151
-C09,United Kingdom,England,Hulme,Drayton Street 75,M15 5LL
-C10,Spain,Región de Murcia,Murcia,RM-302 45,30151
-C11,Iceland,Reykjavíkurborg,Reykjavík,Þingholtsstræti 35,101
-C12,Slovenia,Žilinský,Nitra,Martinengova ulica 144,464 24
-C13,Cyprus,Nicosia,Deftera,Archiepiskopou Makariou III 113,2450
-D01,Ireland,County Louth,Drogheda,Newfield Estate 25,A92 YD5Y
-D02,Croatia,Osječko-baranjska županija,Osijek,Sarajevska ulica 16,31000
-D03,Slovakia,Bratislavský kraj,Ružinov,Prístavná 630,821 09
-D04,Belgium,Région Wallonne,Namur,Chemin de Wépion 51,5020
-D05,Finland,Varsinais-Suomi,Turku,Karviaiskatu 6,20720
-D06,Ireland,County Clare,Ardnacrusha,Keelgrove 5,V94 X9R6
-D07,Estonia,Harju maakond,Tallinn,Kotka 10,11315
-D08,Austria,Niederösterreich,Trumau,Doktor-Körner-Straße 1,2521
-D09,Sweden,Stockholms län,Södermalm,Skarpskyttestigen 6,117 41
-D10,Moldova,Chișinău,Chișinău,Strada Cuza Vodă 23,2028
-D11,Slovakia,Bratislavský kraj,Bratislava,Lovinského 41,811 04
-D12,France,Grand Est,Strasbourg,Boulevard Pierre Pflimlin 42,67000
-D13,Estonia,Tartu maakond,Tartu,Raatuse 117a,50604
-E01,Ireland,County Kildare,Naas,Saint Ita's Place 7,W91 YFD7
-E02,Hungary,Csongrád,Balmazújváros,Vak bottyán 460,1478
-E03,Netherlands,Noord-Brabant,Breda,Claudius Prinsenlaan 134,4818 CP
-E04,Poland,Województwo lubuskie,Gorzów Wielkopolski,Sierakowska 37,66-400
-E05,Ukraine,Ternopil's'ka oblast,Ternopil,Збаразька вулиця 5,46002
-E06,Czech Republic,Moravskoslezský,Horní Jelení,Bronného 299,146 43
-E07,Bulgaria,Sofia City Province,Sofia,zh.k. Hipodruma 133А,1612
-E08,Slovakia,Žilinský kraj,Rosina,Pusté 867/A,013 22
-E09,Iceland,Reykjanesbær,Njarðvík,Fitjabakki 1a,260
-E10,Cyprus,Limassol,Limassol,Anaximandrou 1A,3113
-E11,Portugal,Santarém,Tomar,Casal Das Mouzinhas 35,2300
-E12,Belgium,Vlaams Gewest,Gent,Bijenstraat 18,9051
-E13,Moldova,Raionul Ialoveni,or. Codru,Strada Costiujeni 86b,2011
-F01,Czech Republic,Kraj Vysočina,Brandýs nad Labem-Stará Boleslav,Uzavřená 1080,627 69
-F02,Luxembourg,Esch-sur-Alzette,Sanem,Rue de Niederkorn 5,4990
-F03,Norway,Oslo,Grünerløkka,Brenneriveien 7,0182
-F04,Greece,Κρήτη,Αίγιο,Χαριλάου 1302,67806
-F05,Portugal,Coimbra,Coimbra,Estrada Quinta do Cedro 101,3020
-F06,Andorra,Ordino,Ordino,Xalets de la Cortinada 20,AD300
-F07,Moldova,Chișinău,Chișinău,Strada Albişoara 74/1,2005
-F08,Ukraine,Odes'ka oblast,Odesa,Havanna Street 4,65000
-F09,Sweden,Jämtlands län,Staden,Lugnviksvägen 2,831 52
-F10,Norway,Agder,Grim,Baneheiveien 25,4616
-F11,Netherlands,Noord-Holland,Hilversum,Bijenmeent 42,1218 GC
-F12,Latvia,Olaines novads,Stūnīši,Sūnu iela 15,2127
-F13,Portugal,Coimbra,Coimbra,Rua Bela Vista 105,3020-082
-REM,Poland,Województwo pomorskie,Gdańsk,Starowiejska 50,80-534
-REM2,Switzerland,Vaud,Lausanne,Route de Vidy 1,1007
+A01,Spain,Catalunya,Barcelona,Carrer de Lepant 349,08025
+A02,Portugal,Setúbal,Aroeira,Avenida Pinhal da Aroeira 562,2820-567
+A03,Belgium,Vlaams Gewest,Menen,Knokbeeklaan 86,8930
+A04,Finland,Pohjois-Savo,Kuopio,Lehtoniemen Siskonsaari 8,70840
+A05,Estonia,Lääne-Viru maakond,Rakvere,Räägu 32,44315
+A06,Portugal,Setúbal,Amora,Rua Movimento das Forças Armadas 23A,2845-150
+A07,Cyprus,Nicosia,Strovolos,Athinon 91,2035
+A08,Austria,Tirol,Innsbruck,Gramartstraße 107,6020
+A09,Andorra,Escaldes-Engordany,Escaldes-Engordany,Avinguda Fiter i Rossell 107,AD700
+A10,Lithuania,Marijampolės apskritis,Marijampolė,R. Juknevičiaus gatvė 12,68218
+A11,Germany,Nordrhein-Westfalen,Düsseldorf,Flughafenstraße 120,40474
+A12,Lithuania,Marijampolės apskritis,Marijampolė,Sporto gatvė 15,68108
+A13,Belgium,Vlaams Gewest,Evergem,Durmakker 6,9940
+B01,Ukraine,Donets'ka oblast,Donetsk,Zhebeljeva Street 121,83000
+B02,Netherlands,Noord-Brabant,'s-Hertogenbosch,Negende Donk 39,5233 PK
+B03,Hungary,Fejér,Dombóvár,Vágóhíd 247,4337
+B04,Poland,Województwo śląskie,Gliwice,Gronowa 79,44-141
+B05,Croatia,Zadarska županija,Zadar,Ulica Hrvatskog Sabora bb,23000
+B06,Sweden,Västra Götalands län,Krokslätt,Gibraltargatan 84,412 79
+B07,Portugal,Faro,Faro,Estrada Municipal 518-1 64B,8005
+B08,Norway,Oslo,Nordstrand,Olleveien 22B,1182
+B09,Netherlands,Zuid-Holland,Moordrecht,Uiterwaard 117,2841 BL
+B10,Switzerland,Valais,Vex,le Poulan 37,1981
+B11,Austria,Salzburg,Elsbethen,General-Albori-Straße 1,5061
+B12,Sweden,Östergötlands län,Ingelsta,Kommendantvägen 62,602 38
+B13,Germany,Nordrhein-Westfalen,Bielefeld,Sareptaweg 12,33617
+C01,Iceland,Reykjanesbær,Njarðvík,Holtsgata 51,260
+C02,Czech Republic,Karlovarský,Jičín,Důl Max 881,966 42
+C03,Netherlands,Zuid-Holland,Rotterdam,Berkelselaan 22,3037 PE
+C04,Iceland,Kópavogsbær,Kópavogur,Fífuhjalli 19,200
+C05,MC,Minnesota,Shelton,Leroy 786,87355
+C06,Latvia,Mārupes novads,Mārupe,Daibes iela 35,2167
+C07,Germany,Baden-Württemberg,Stuttgart,Rohrackerstraße 322,70329
+C08,Luxembourg,Luxemburg,Luxemburg,Boulevard Konrad Adenauer 39,1115
+C09,Czech Republic,Královéhradecký,Cheb,Krkonošská 977,156 64
+C10,Italy,Piemonte,Vercelli,Via Riccardo Restano 155,13100
+C11,Cyprus,Nicosia,Strovolos,Michael Kasialou 21,2328
+C12,United Kingdom,England,Harehills,Wepener Mount 8,LS9 6LR
+C13,Cyprus,Nicosia,Strovolos,Stadiou 26,2058
+D01,Lithuania,Marijampolės apskritis,Nartas,Liepynų g. 39,68124
+D02,Slovenia,Žilinský,Nemšová,Vinohradnícka ulica 357,012 11
+D03,France,Pays de la Loire,Nantes,Rue Reine Astrid 7,44300
+D04,Latvia,Talsu novads,Sabile,Rīgas iela 49,3294
+D05,Croatia,Zadarska županija,Zadar,Obala kneza Trpimira 8,23000
+D06,Andorra,Andorra la Vella,Andorra la Vella,Carrer Mestre Xavier Plana 34,AD500
+D07,Spain,Andalucía,Málaga,Calle Periodista Paco Fadón 52,29018
+D08,Bulgaria,Sofia City Province,Sofia,ж.к. Овча купел 1 416Д,1632
+D09,Slovenia,Bratislavský,Stará Turá,Kalinová ulica 87,216 49
+D10,Spain,Andalucía,Valchillón,A-3051 1,14013
+D11,Finland,Uusimaa,Espoo,Vanha maantie 17,02650
+D12,Iceland,Reykjanesbær,Njarðvík,Hjallavegur 1,260
+D13,Estonia,Tartu maakond,Tartu,Muuseumi tee 3,51009
+E13,Moldova,Ставропольский край,Боровичи,Зубовская 1112,713148
+F13,Portugal,Santarém,Tomar,CM1134 3,2300
+REM1,Georgia,Imereti,Kutaisi,Tamar The Queen Street 77,4600
+REM2,Poland,Województwo małopolskie,Kraków,Stanisława Lema 21B,31-571
